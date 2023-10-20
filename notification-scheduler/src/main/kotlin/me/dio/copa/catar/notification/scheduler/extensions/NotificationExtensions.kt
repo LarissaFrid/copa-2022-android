@@ -1,5 +1,6 @@
 package me.dio.copa.catar.notification.scheduler.extensions
 
+import android.annotation.SuppressLint
 import android.app.Notification
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -13,6 +14,7 @@ private const val CHANNEL_ID = "new_channel_video"
 private const val NOTIFICATION_NAME = "Notificações"
 private const val NOTIFICATION_INTENT_REQUEST_CODE = 0
 
+@SuppressLint("MissingPermission")
 fun Context.showNotification(title: String, content: String) {
     createNotificationChannel()
     val notification = getNotification(title, content)
